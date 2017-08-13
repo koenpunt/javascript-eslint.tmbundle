@@ -1,0 +1,27 @@
+{
+  "name": "javascript-eslint.tmbundle",
+  "version": "4.0.0",
+  "description": "Use the ESLint JavaScript validator in TextMate 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natesilva/javascript-eslint.tmbundle.git"
+  },
+  "keywords": [
+    "textmate",
+    "bundle",
+    "eslint"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/natesilva/javascript-eslint.tmbundle/issues"
+  },
+  "homepage": "https://github.com/natesilva/javascript-eslint.tmbundle#readme",
+  "devDependencies": {
+    "eslint": "^4.4.1"
+  }
+}
