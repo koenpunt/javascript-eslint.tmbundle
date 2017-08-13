@@ -4,7 +4,7 @@ const spawn = require('child_process').spawn;
 
 const log = fs.openSync(path.join(__dirname, 'runner.log'), 'a');
 
-spawn('node', ['./runner.js'], {
+spawn(process.env.TM_NODE || 'node', ['./runner.js'], {
   detached: true,
   stdio: ['ignore', log, log],
   env: process.env,
