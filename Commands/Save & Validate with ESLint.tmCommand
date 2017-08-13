@@ -11,18 +11,8 @@
 
 set -f
 
-TPY=${TM_PYTHON:-python}
-OUTPUT=$("${TPY}" "${TM_BUNDLE_SUPPORT}/main.py")
-
-if [[ ${OUTPUT} == *"!DOCTYPE html"* ]]; then
-  exit_show_html "${OUTPUT}"
-fi
-
-if [[ "${OUTPUT}" = "" ]]; then
-	exit_discard
-else
-	exit_show_tool_tip "${OUTPUT}"
-fi
+NODE=${TM_NODE:-node}
+OUTPUT=$("${NODE}" "${TM_BUNDLE_SUPPORT}/index.js")
 </string>
 	<key>input</key>
 	<string>scope</string>
