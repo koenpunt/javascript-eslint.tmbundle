@@ -1,5 +1,4 @@
-const { execFile, spawn, exec } = require('child_process');
-// const execFile = require('child_process').execFile;
+const { execFile, exec } = require('child_process');
 
 const IGNORE_PATTERN = /^File ignored because of a matching ignore pattern/;
 
@@ -44,7 +43,7 @@ function updateGutterMarks(result) {
 }
 
 function clearGutterMarks() {
-  execFile(process.env.TM_MATE, ['--clear-mark=warning', '--clear-mark=error', `'${process.env.TM_FILEPATH}'`]);
+  execFile(process.env.TM_MATE, ['--clear-mark=warning', '--clear-mark=error', process.env.TM_FILEPATH]);
 }
 
 function inflect(singular, plural, count) {
