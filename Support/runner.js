@@ -86,10 +86,6 @@ function run(callback) {
   });
 }
 
-module.exports = {
-  run: run,
-};
-
 if (require.main === module) {
   run(result => {
     if (result) {
