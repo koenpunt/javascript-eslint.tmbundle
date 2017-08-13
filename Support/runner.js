@@ -27,7 +27,7 @@ function getEnv() {
 }
 
 function shouldIgnore(message) {
-  return IGNORE_PATTERN.test(message);
+  return IGNORE_PATTERN.test(message.message);
 }
 
 function updateGutterMarks(result) {
