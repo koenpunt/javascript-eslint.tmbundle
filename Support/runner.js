@@ -76,12 +76,8 @@ function run(callback) {
     cwd: getCwd(),
     env: getEnv(),
   }, (err, stdout, stderr) => {
-    try {
-      const results = JSON.parse(stdout);
-      callback(results[0]);
-    } catch (e) {
-      console.trace(e);
-    }
+    const results = JSON.parse(stdout);
+    callback(results[0]);
   });
 }
 
