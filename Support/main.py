@@ -110,7 +110,7 @@ def full_report():
         context['warningCountString'] = '%s warnings' % warning_count
 
     html = ASHES_ENV.render('report.html', context)
-    print(html)
+    print(html.encode('utf-8'))
 
 
 def quiet():
